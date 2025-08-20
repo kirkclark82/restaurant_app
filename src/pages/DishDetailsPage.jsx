@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getDishById } from '../data/dishes';
 import '../styles/DishDetailsPage.css';
 
+//testing 
 const DishDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
