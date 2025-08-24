@@ -1,0 +1,67 @@
+/* CategoryList Styles */
+
+.category-list {
+  margin-bottom: 3rem;
+}
+
+.category-list__container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-list__button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  transition: var(--transition-all);
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  background-color: var(--color-white);
+  color: var(--color-gray-700);
+  box-shadow: var(--shadow-md);
+}
+
+.category-list__button:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-list__button--active {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  border-color: var(--color-deep-red);
+}
+
+.category-list__button--active:hover {
+  background-color: var(--color-deep-red);
+}
+
+.category-list__icon {
+  margin-right: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.category-list__text {
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .category-list__container {
+    gap: 0.5rem;
+  }
+  
+  .category-list__button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .category-list__icon {
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+}

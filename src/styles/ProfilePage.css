@@ -1,0 +1,326 @@
+/* ProfilePage Styles */
+
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  padding: 3rem 0;
+}
+
+.profile-page__container {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .profile-page__container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-page__container {
+    padding: 0 2rem;
+  }
+}
+
+.profile-page__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-page__title {
+  font-size: 2.25rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-deep-red);
+  margin-bottom: 1rem;
+}
+
+.profile-page__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-olive);
+}
+
+.profile-page__card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.profile-page__card-header {
+  background: linear-gradient(to right, var(--color-terracotta), var(--color-deep-red));
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-page__avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--color-deep-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile-page__name {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.profile-page__email {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+}
+
+.profile-page__content {
+  padding: 2rem;
+}
+
+.profile-page__section {
+  margin-bottom: 2rem;
+}
+
+.profile-page__section:last-child {
+  margin-bottom: 0;
+}
+
+.profile-page__section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-deep-red);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-page__section-icon {
+  color: var(--color-olive);
+}
+
+.profile-page__info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .profile-page__info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.profile-page__info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--color-cream);
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(139, 0, 0, 0.1);
+}
+
+.profile-page__info-label {
+  color: var(--color-olive);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.profile-page__info-value {
+  color: var(--color-deep-red);
+  font-weight: 600;
+}
+
+.profile-page__preferences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-page__preference-tag {
+  background-color: var(--color-olive);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.profile-page__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.profile-page__button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  font-weight: 600;
+  transition: var(--transition-all);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-page__button--primary {
+  background-color: var(--color-terracotta);
+  color: white;
+}
+
+.profile-page__button--primary:hover {
+  background-color: var(--color-deep-red);
+  transform: translateY(-1px);
+}
+
+.profile-page__button--secondary {
+  background-color: transparent;
+  color: var(--color-olive);
+  border: 2px solid var(--color-olive);
+}
+
+.profile-page__button--secondary:hover {
+  background-color: var(--color-olive);
+  color: white;
+}
+
+.profile-page__button--disabled {
+  background-color: #E5E7EB !important;
+  color: #9CA3AF !important;
+  cursor: not-allowed !important;
+}
+
+.profile-page__button--disabled:hover {
+  transform: none !important;
+}
+
+/* Logout Section */
+.profile-page__logout-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.profile-page__logout-button {
+  width: 100%;
+  background-color: #DC2626;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  font-weight: 600;
+  transition: var(--transition-all);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile-page__logout-button:hover {
+  background-color: #B91C1C;
+  transform: translateY(-1px);
+}
+
+/* Logout Modal */
+.logout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.logout-modal__content {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.logout-modal__icon {
+  font-size: 3.75rem;
+  color: #DC2626;
+  margin-bottom: 1rem;
+}
+
+.logout-modal__title {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-deep-red);
+  margin-bottom: 1rem;
+}
+
+.logout-modal__message {
+  color: var(--color-gray-600);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.logout-modal__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.logout-modal__button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-lg);
+  font-weight: 600;
+  transition: var(--transition-all);
+  cursor: pointer;
+  border: none;
+}
+
+.logout-modal__button--cancel {
+  background-color: #E5E7EB;
+  color: #374151;
+}
+
+.logout-modal__button--cancel:hover {
+  background-color: #D1D5DB;
+}
+
+.logout-modal__button--confirm {
+  background-color: #DC2626;
+  color: white;
+}
+
+.logout-modal__button--confirm:hover {
+  background-color: #B91C1C;
+  transform: translateY(-1px);
+}
