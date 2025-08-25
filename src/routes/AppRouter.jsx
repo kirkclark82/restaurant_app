@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { isOnboardingCompleted } from '../utils/sqliteStorage';
+import { isOnboardingCompleted } from '../utils/simpleStorage';
 import Header from '../components/Header';
 import LandingPage from '../pages/LandingPage';
 import OnboardingPage from '../pages/OnboardingPage';

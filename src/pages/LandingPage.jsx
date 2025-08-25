@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getProfileByEmail, sendPasswordEmail, setOnboardingCompleted } from '../utils/sqliteStorage';
+import { getProfileByEmail, sendPasswordEmail, setOnboardingCompleted, setActiveUser } from '../utils/simpleStorage';
 import '../styles/LandingPage.css';
 
 const LandingPage = () => {
@@ -61,6 +61,8 @@ const LandingPage = () => {
         const profile = await getProfileByEmail(email);
         if (profile) {
           try {
+            // Set this user as the active user
+            await setActiveUser(email);
             await setOnboardingCompleted();
           } catch (error) {
             console.error('Error marking onboarding as completed:', error);

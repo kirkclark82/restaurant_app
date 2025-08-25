@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveProfile, setOnboardingCompleted } from '../utils/sqliteStorage';
+import { saveProfile, setOnboardingCompleted, setActiveUser } from '../utils/simpleStorage';
 import '../styles/OnboardingPage.css';
 
 const OnboardingPage = () => {
@@ -64,6 +64,8 @@ const OnboardingPage = () => {
       setIsCompleting(true);
       try {
         await saveProfile(profile);
+        // Set this user as the active user
+        await setActiveUser(profile.email);
         await setOnboardingCompleted();
         
         await new Promise(resolve => setTimeout(resolve, 200));

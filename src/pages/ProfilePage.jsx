@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getProfile, clearUserData, removeAllUserData } from '../utils/sqliteStorage';
+import { getProfile, clearUserData, removeAllUserData, setActiveUser } from '../utils/simpleStorage';
 import '../styles/ProfilePage.css';
 
 const ProfilePage = () => {
@@ -33,6 +33,8 @@ const ProfilePage = () => {
 
   const handleLogout = () => {
     clearUserData();
+    // Clear the active user
+    setActiveUser('');
     navigate('/');
     setShowLogoutModal(false);
   };
